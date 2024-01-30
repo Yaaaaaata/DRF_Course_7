@@ -10,8 +10,8 @@ from habits.services import send_message
 def send_habit():
     time_now = datetime.now()
     habits = Habit.objects.all()
-    token = '6855759826:AAFNEV1QcK6LFA9k34AsDFOZINhOYWXI6x8'
-    # token = os.getenv('TELEGRAM_BOT_TOKEN')
+    # token = '6855759826:AAFNEV1QcK6LFA9k34AsDFOZINhOYWXI6x8'
+    token = os.getenv('TELEGRAM_BOT_TOKEN')
 
     for habit in habits:
         if habit.time >= time_now - timedelta(minutes=15):
