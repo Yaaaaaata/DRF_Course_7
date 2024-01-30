@@ -205,3 +205,4 @@ CELERY_BEAT_SCHEDULE = {
         'schedule': timedelta(minutes=10),  # Расписание выполнения задачи (например, каждые 10 минут)
     },
 }
+

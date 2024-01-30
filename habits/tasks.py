@@ -18,3 +18,4 @@ def send_habit():
             message = f"Напоминание о привычке {habit.action}" \
                       f"Связанная привычка или награда: {habit.related_habit if habit.related_habit else habit.reward}"
             send_message(token=token, telegram_id=habit.user.telegram_id, message=message)
+
