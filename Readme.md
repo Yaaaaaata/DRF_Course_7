@@ -99,3 +99,14 @@ Linux -> `python3 manage.py test`
 `CHAT_ID_ADMIN`
 `ADMIN_PASSWORD`
 `TELEGRAM_BOT_TOKEN`
+
+
+### В проекте используется Docker Compose
+
+* Установите Docker, следуя инструкциям для вашей операционной
+  системы: [Docker Install](https://docs.docker.com/get-docker/).
+* Установите Docker Compose: [Docker Compose Install](https://docs.docker.com/compose/install/).
+
+Для запуска приложения необходимо выполнить следующие команды: 
+* ***docker-compose build*** - сборка образа
+* ***docker-compose up*** - запуск контейнера
