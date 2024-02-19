@@ -87,12 +87,16 @@ Win -> `python manage.py test`
 
 Linux -> `python3 manage.py test`
 
-> для работы необходимо прописать переменные окружения:
+***ENV***
 
-`POSTGRES_NANE`
+> Необходимо прописать переменные окружения 
+> для подключения к базе данных Postgres:
+
+`POSTGRES_DB`
 `POSTGRES_USER`
 `POSTGRES_PASSWORD`
 `POSTGRES_HOST`
+`POSTGRES_PORT`
 
 `SECRET_KEY`
 
@@ -100,6 +104,10 @@ Linux -> `python3 manage.py test`
 `ADMIN_PASSWORD`
 `TELEGRAM_BOT_TOKEN`
 
+`CELERY_BROKER_URL`
+`CELERY_RESULT_BACKEND`
+
+ Файл `.env` должен находиться в корне проекта.
 
 ### В проекте используется Docker Compose
 
@@ -110,3 +118,15 @@ Linux -> `python3 manage.py test`
 Для запуска приложения необходимо выполнить следующие команды: 
 * ***docker-compose build*** - сборка образа
 * ***docker-compose up*** - запуск контейнера
+
+Вот пошаговая инструкция:
+
+1. Откройте командную строку или терминал и перейдите в директорию, где находится файл docker-compose.yml.
+
+2. Запустите команду docker-compose up. Docker Compose будет читать файл docker-compose.yml и создавать и запускать контейнеры, описанные в этом файле.
+
+3. По умолчанию, команда docker-compose up будет выводить логи контейнеров в текущем терминале. Чтобы запустить контейнеры в фоновом режиме, используйте флаг -d, например: docker-compose up -d.
+
+4. Docker Compose создаст и запустит все контейнеры, описанные в файле docker-compose.yml. Вы сможете видеть логи работы контейнеров и контролировать их состояние.
+
+5. Чтобы остановить контейнеры, используйте команду docker-compose down. Эта команда остановит и удалит все контейнеры, созданные с помощью docker-compose.yml.
